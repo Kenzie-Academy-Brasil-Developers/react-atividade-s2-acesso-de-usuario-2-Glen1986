@@ -1,0 +1,9 @@
+.home{
+  display: flex;
+  flex-direction: column;
+}
+.link > a{
+  color: white;
+  display:flex;
+  flex-direction:column;
+}
