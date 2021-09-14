@@ -1,13 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
-const Company =({member})=>{
+const Company =({members})=>{
+  const params = useParams()
+  const member = members.map(item => item.name )
+  console.log(params )
+//  console.log( member )
   return(
 <div>
   <h1>Detalhes da Empresa</h1>
 
   <p>
-    Nome da empresa: {member && member.name}
+    Nome da empresa: {member}
   </p>
 
   <Link to="/">
