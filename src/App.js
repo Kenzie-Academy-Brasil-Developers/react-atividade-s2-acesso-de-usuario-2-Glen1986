@@ -18,9 +18,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home 
-              member = {members.map(item=>item.id)}
               members = {members}
-              type = { members.map(item=>item.type) }
 
             ></Home>
           </Route>
@@ -31,7 +29,9 @@ function App() {
           </Route>
 
           <Route path="/customer/:id">
-            <Customer></Customer>
+            <Customer
+             members = {members}
+            ></Customer>
           </Route>
 
         </Switch>

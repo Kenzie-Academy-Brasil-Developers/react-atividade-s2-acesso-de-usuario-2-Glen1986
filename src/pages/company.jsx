@@ -3,9 +3,11 @@ import { Link, useParams } from 'react-router-dom'
 
 const Company =({members})=>{
   const params = useParams()
-  const member = members.map(item => item.name )
+  const member = members.find(item => item.id === params )
+
+//  const name = member.filter(item=> item === params)
   console.log(params )
-//  console.log( member )
+  console.log( member )
   return(
 <div>
   <h1>Detalhes da Empresa</h1>
