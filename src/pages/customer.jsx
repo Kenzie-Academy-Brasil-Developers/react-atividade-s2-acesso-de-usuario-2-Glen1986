@@ -1,21 +1,25 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-
-const Customer =({members})=>{
-  /** 
-  const member = members.find(item =>item.id)
-  const history = useHistory()
+import { 
+  useParams, 
+  Link, 
+  useHistory 
+} from 'react-router-dom';
+/***
+  *const param = useParams();
+  const member = members.find(item =>param)
   console.log(history)
-      **/
-  const param = useParams();
-   return(
+  const history = useHistory()
+  * ****/
+const Customer =({members})=>{
+  
+
+    return(
 
 <div>
   <h1>Detalhes do cliente</h1>
 
   <p>
-    Nome: customer{param.id}
+    Nome: customer{}
 
   </p>
 
